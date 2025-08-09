@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KMS Foods - Royal Rayalaseema Chicken Pickles</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap');
+
+    body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: #111;
+        color: white;
+    }
+    header {
+        background: #000;
+        text-align: center;
+        padding: 60px 20px;
+        border-bottom: 5px solid gold;
+        background-image: repeating-linear-gradient(
+            45deg,
+            rgba(255, 215, 0, 0.05),
+            rgba(255, 215, 0, 0.05) 10px,
+            transparent 10px,
+            transparent 20px
+        );
+    }
+    .header-box {
+        display: inline-block;
+        border: 4px solid gold;
+        padding: 20px 40px;
+        border-radius: 12px;
+        background: rgba(0, 0, 0, 0.8);
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+    }
+    header h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3em;
+        color: gold;
+        margin-bottom: 10px;
+    }
+    header p {
+        font-size: 1.2em;
+        color: white;
+        margin-bottom: 8px;
+    }
+    .highlight {
+        font-size: 1.1em;
+        font-weight: bold;
+        background: gold;
+        color: black;
+        display: inline-block;
+        padding: 5px 12px;
+        border-radius: 6px;
+        margin-top: 5px;
+    }
+    .section {
+        padding: 40px 20px;
+        max-width: 1000px;
+        margin: auto;
+        border-bottom: 2px solid gold;
+    }
+    h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2em;
+        color: gold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .prices {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        gap: 20px;
+    }
+    .price-card {
+        background: #000;
+        border: 2px solid gold;
+        padding: 20px;
+        text-align: center;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.3s;
+        font-weight: bold;
+        font-size: 1.2em;
+        box-shadow: 0 4px 15px rgba(255,215,0,0.1);
+        color: gold;
+    }
+    .price-card:hover {
+        background: gold;
+        color: black;
+        transform: translateY(-5px);
+        box-shadow: 0 0 15px gold;
+    }
+    .why, .how, .testimonials {
+        background: rgba(0,0,0,0.8);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(255,215,0,0.2);
+        font-size: 1.1em;
+        border: 1px solid gold;
+    }
+    form {
+        background: rgba(0,0,0,0.85);
+        padding: 25px;
+        border-radius: 12px;
+        border: 2px solid gold;
+        box-shadow: 0 4px 12px rgba(255,215,0,0.2);
+    }
+    form input {
+        width: 100%;
+        padding: 12px;
+        margin-top: 12px;
+        font-size: 1em;
+        border: 2px solid gold;
+        border-radius: 8px;
+        background: black;
+        color: white;
+    }
+    form button {
+        width: 100%;
+        padding: 15px;
+        margin-top: 15px;
+        font-size: 1.1em;
+        background: gold;
+        color: black;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    form button:hover {
+        background: black;
+        color: gold;
+        border: 2px solid gold;
+    }
+    a {
+        color: gold;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="header-box">
+        <h1>KMS FOODS</h1>
+        <p>Eat Every Day – Rayalaseema Style Homemade Chicken Pickles</p>
+        <div class="highlight">Authentic • Fresh • Royal Taste</div>
+    </div>
+</header>
+
+<div class="section">
+    <h2>Our Special Prices
+    select to order </h2>
+    <div class="prices">
+        <div class="price-card" onclick="scrollToOrder('50 grams',50)">50 grams - ₹50</div>
+        <div class="price-card" onclick="scrollToOrder('100 grams',100)">100 grams - ₹100</div>
+        <div class="price-card" onclick="scrollToOrder('200 grams',190)">200 grams - ₹190</div>
+        <div class="price-card" onclick="scrollToOrder('250 grams',240)">250 grams - ₹240</div>
+        <div class="price-card" onclick="scrollToOrder('500 grams',475)">500 grams - ₹475</div>
+        <div class="price-card" onclick="scrollToOrder('1 Kg',930)">1 Kg - ₹930</div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Why Choose Us?</h2>
+    <div class="why">
+        <div>✔ Authentic Rayalaseema flavors</div>
+        <div>✔ 100% homemade & hygienic</div>
+        <div>✔ Affordable prices compared to market</div>
+        <div>✔ Freshly prepared in small batches</div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Customer Testimonials</h2>
+    <div class="testimonials">
+        <div>⭐ "The taste reminds me of home! Spicy, tangy, and fresh." – Suresh, Hyderabad</div>
+        <div>⭐ "Best chicken pickle I’ve ever had. Worth every rupee!" – Priya, Bangalore</div>
+        <div>⭐ "Delivered fresh and fast. Highly recommended!" – Ramesh, Chennai</div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>How to Order</h2>
+    <div class="how">
+        <div>1️⃣ Click any price above to fill the order form</div>
+        <div>2️⃣ Enter your name, phone, and quantity</div>
+        <div>3️⃣ Click "Submit Order" to send via WhatsApp</div>
+    </div>
+</div>
+
+<div class="section" id="order">
+    <h2>Place Your Order</h2>
+    <form id="orderForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="tel" id="phone" placeholder="Enter your Phone Number" required>
+        <input type="text" id="quantity" placeholder="Quantity (e.g. 250 grams)" required>
+        <button type="submit">Submit Order on WhatsApp</button>
+    </form>
+</div>
+
+<div class="section">
+    <h2>📍 KMS Chicken Pickles Location</h2>
+    <p>We are based in Rayalaseema, Andhra Pradesh old town.</p>
+    <p><a href="https://maps.app.goo.gl/WBru5Dsbj1g8zCbd6?g_st=ac" target="_blank">View on Google Maps</a></p>
+</div>
+
+<script>
+    function scrollToOrder(quantity='', price='') {
+        document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+        if(quantity) {
+            document.getElementById('quantity').value = quantity + ' - ₹' + price;
+        }
+    }
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        let name = document.getElementById('name').value;
+        let phone = document.getElementById('phone').value;
+        let quantity = document.getElementById('quantity').value;
+        let message = `Order Details:%0AName: ${name}%0APhone: ${phone}%0AQuantity: ${quantity}`;
+        window.open(`https://wa.me/917013025534?text=${message}`, '_blank');
+    });
+</script>
+
+</body>
+</html>
